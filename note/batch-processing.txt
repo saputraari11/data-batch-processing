@@ -1,0 +1,14 @@
+what is batch processing?
+
+batch processing is way to process data on a period of time.
+
+what is period of time?
+
+this means that we can process data every time with our schedule,we can set time to process and set up time with different period.
+
+what is type of batch processing?
+
+- batch processing handle big data on a period of time.
+
+- batch processing has 2 process such as incremental load and full load.
+

@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Tue Feb 14 16:26:16 WIB 2023:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0186-4f3f-09bd-000003bbf5f0 
+on database directory /home/saputra/belajar/data-batch-processing/metastore_db with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@42110406 
+Loaded from file:/home/saputra/belajar/data-batch-processing/belajar_batch/lib/python3.9/site-packages/pyspark/jars/derby-10.14.2.0.jar
+java.vendor=N/A
+java.runtime.version=17.0.6+10
+user.dir=/home/saputra/belajar/data-batch-processing
+os.name=Linux
+os.arch=amd64
+os.version=5.15.91-4-lts
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

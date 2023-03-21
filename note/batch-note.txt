@@ -1,0 +1,22 @@
+what is batch processing? 
+....
+
+what is advantage of batch processing?
+
+- easy to manage -> because we just need workflow to manage our batch processing.
+- retry -> if task in batch processing is failed,we can retry it task automatically.
+- scale -> we can hit our task while the task is problem,that is called scale.
+
+what is disadvantage of stream processing?
+
+- delay -> because batch processing have much time in workflow execution,and that is disadvantage of batch processing.
+
+data transfer from asia to erope always problem.
+
+chunk data gunanya untuk read/loading data aja dan kalau kita read banyak jadi lama makanya kita perlu read part per part
+
+fungsi partition itu hanya mempermudah kita untuk mengambil data bedasarkan key per groupingnya.
+
+partition itu digrouping sementara chunk data itu kumpulan data random yang dibagi dalam group kecil
+
+perbedaan waktu antara chunk data dengan data biasa?

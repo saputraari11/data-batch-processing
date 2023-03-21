@@ -1,0 +1,104 @@
+what is apache spark?
+
+spark is data processing engine for processing data in data lake or data lake to warehouse or data lake to data lake.
+
+what is function of apache spark?
+
+spark can be use for batch processing and stream processing.
+
+when to use spark?
+
+we use spark for processing data in data lake.
+
+why don't we use sql for processing data?
+
+because sql is not always easy to manage our bunch file in data lake.
+
+can we use sql in apache spark?
+
+yes,we can use sql in apache spark with hive and presto/athena
+
+who is better between apache spark and sql for processing data?
+
+the answer is apache spark,because sql is difficult to manage and we must create much function for a query and create unit test for our function,
+that is the problem of sql in processing data,exactly we must use apache spark for processing data.
+
+what is first schema of spark when spark read file?
+
+first schema is string for all child.
+
+what is partition?
+
+partition is file that save in data lake 
+
+how can spark handle partition?
+
+spark have spark cluster and spark cluster have executor worker or core cpu,every code must handle partition,let say if our partition is 54 and size is big,
+maybe much core can handle it,semakin besar size partition will be our many executor executed that partition,for example :
+
+our file is 6.7 gb and partition is 54.
+we will need 10 core or worker executor.
+
+what is master in spark?
+
+master is refers to how many our executor worker/core
+
+
+lazy evaluation vs eager evaluation?
+
+analogi tidur, namanya lazy pasti malas untuk bangun beraktivitas, eager ialah anak yang rajin.
+
+anak yang rajin akan selalu membangunkan anak yang malas untuk beraktivitas.
+
+disini lazy evaluasi ialah proses nya jalan tapi tidak menampilkan aksi,diperlukan eager evaluasi untuk menampilkan hasil.
+
+sql vs user definition function (udf) ?
+
+sql with case or filter is difficult to handle or tranformation result.
+user function definition is good for handle and tranformation result in python.
+
+outer join 
+
+gabungan 2 tabel dengan hasilnya seperti dibawah:
+
+record A akan ada tetapi record B kosong dalam sebuah ID.
+|   1|2020-03-21 17:00:00|             100.3|                   1|         null|                 null|
+
+
+record B akan ada tetapi record A kosong dalam sebuah ID.
+|   1|2020-01-01 09:00:00|        null|                null|            175.26|                    2|
+
+record A dan B ada dalam sebuah ID.
+|   1|2020-02-06 07:00:00|        98.3|                   1|             82.61|                    2|
+
+
+rdd digunakan untuk membuat struktur data baru setelah tranformation data.
+
+udf digunakan untuk tranformasi menambahkan value baru atau statement dari value data.
+
+sql digunakan untuk big query atau temp data.
+
+tranformasi itu ada join,grouping,filtering,ordering,create new data struktur,cleaning data.
+
+
+download hadoop with google
+
+gsutil cp gs://hadoop-lib/gcs/gcs-connector-hadoop3-2.2.5.jar gcs-connector-hadoop3-2.2.5.jar
+
+submit job in local to spark 
+
+URL="spark://sapautraArch:7077"
+spark-submit --master="${URL}" analisis/processing.py \ 
+--input_green="./analisis/data/pq/green/*/" \
+--input_yellow="./analisis/data/pq/yellow/*/" \
+--output="./analisis/data/report/revenue-2020-2"
+
+
+submit job in google to spark 
+gcloud dataproc jobs submit pyspark 
+--cluster=datatalks-camp-1 
+--region=europe-west6 gs://dtc_data_lake_pro-habitat-376010/code/processing.py 
+-- 
+--input_green="gs://dtc_data_lake_pro-habitat-376010/pq/green/*/" 
+--input_yellow="gs://dtc_data_lake_pro-habitat-376010/pq/yellow/*/" 
+--output="gs://dtc_data_lake_pro-habitat-376010/report/revenue-2020-2"

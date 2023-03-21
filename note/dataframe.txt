@@ -1,0 +1,10 @@
+Yes, they will be stored in memory, and that's the reason why you want to chunk them - that allows you to not read the whole data set in at the same time, 
+but process it in chunks before writing out the end result.
+
+You can use chunksize to tell pandas how many rows should be read for each chunk. 
+If you need a complete set of rows to perform arbitrary lookups, you'll have to back it with some other technology (such as a database).
+
+partition in dataframe or partition is some row that has been gathered into one group.
+
+let say if we want chunk row is 100000.
+that means 100000 row,we can save it into chunk or partition.
